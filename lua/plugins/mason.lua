@@ -5,6 +5,11 @@ return {
     "onsails/lspkind-nvim",
     config = function() require("mason").setup() end,
   },
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^5", -- Recommended
+    lazy = false,   -- This plugin is already lazy
+  },
   "neovim/nvim-lspconfig",
   {
     "williamboman/mason-lspconfig.nvim",
@@ -23,6 +28,7 @@ return {
             capabilities = capabilities,
           }
         end,
+        ["rust_analyzer"] = function() end,
       }
     end,
   },
